@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'makkah_db' );
 
 /** MySQL database username */
-define( 'DB_USER', 'osamadiab' );
+define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'osamadiab' );
+define( 'DB_PASSWORD', '' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
