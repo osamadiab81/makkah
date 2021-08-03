@@ -8,15 +8,26 @@
  */
 
 ?>
+					
+
+
+					<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="assets/images/blog/default/thum1.jpg" alt=""></a> </div>
+					<div class="dez-post-text">
+					</div>
+
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<div class="blog-post blog-single">
+
 		<?php
+		
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<div class="dez-post-title "><h3 class="post-title">', '</h3></div>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<div class="dez-post-title "><h3 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3></div>' );
 		endif;
+		
 
 		if ( 'post' === get_post_type() ) :
 			?>
@@ -26,38 +37,29 @@
 				osama_theme_1_0_posted_by();
 				?>
 			</div><!-- .entry-meta -->
+			
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+		</div><!-- .entry-header -->
 
 	<?php osama_theme_1_0_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'osama-theme-1-0' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+	
+	<?php if (has_post_thumbnail()) {?>
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'osama-theme-1-0' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+	 <div class="dez-post-media dez-img-effect zoom-slow"> 
+		 <?php the_post_thumbnail(); ?>
+		 <!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/blog/default/thum1.jpg" alt="">  -->
+		</div>
+		<?php } ?>
+
+
+	<div class="dez-post-text">
+	<?php the_excerpt(); ?>
+	</div>
+	<!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php osama_theme_1_0_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
+<!-- #post-<?php the_ID(); ?> -->

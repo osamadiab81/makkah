@@ -104,40 +104,77 @@
 							</form>
 						</div>
 						<!-- main nav -->
-
-					
-
 						<div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
-						<?php
-							wp_nav_menu(array(
-								// 'menu'              => "", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
-								// 'menu_id'           => "", // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
-								// 'theme_location'    => "Primary", // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
-								'menu_class'        => "nav navbar-nav", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
-								'container'         => "ul", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
-								'container_class'   => "navbar-collapse collapse", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
+                        <ul class="nav navbar-nav">
+                            <li class="active"> <a href="javascript:;">الرئيسية<i class="fa fa-chevron-down"></i></a></li>
+                            <li class="has-mega-menu"> <a href="javascript:;">الإمارة<i class="fa fa-chevron-down"></i></a>
+                                <ul class="mega-menu">
+                                    <li>
+                                        <ul>
+											<li><a href="full-page-gallery-light.html">الأخبار</a></li>
+                                            <li><a href="gallery-grid-2.html">الهيكل التنظيمي</a></li>
+											<li><a href="gallery-grid-3.html">دليل الإجراءات</a></li>
+                                            <li><a href="gallery-grid-4.html">مجلة مكة</a></li>
+										</ul>
+                                    </li>
+									<li>
+										<ul>
+											<li><a href="coming-soon-5.html">أمراء منطقة مكة</a></li>
+											<li><a href="coming-soon-6.html">ملتقى مكة الثقافي</a></li>
+											<li><a href="coming-soon-7.html">هيئة تطوير منطقة مكة</a></li>
+											<li><a href="coming-soon-8.html">جائزة مكة للتميز</a></li>
+										</ul>
+									</li>
+                                </ul>
+                            </li>
 
-								// 'container_id'      => "", // (string) The ID that is applied to the container.
-								// 'fallback_cb'       => "", // (callable|bool) If the menu doesn't exists, a callback function will fire. Default is 'wp_page_menu'. Set to false for no fallback.
-								// 'before'            => "", // (string) Text before the link markup.
-								// 'after'             => "", // (string) Text after the link markup.
-								// 'link_before'       => "", // (string) Text before the link text.
-								// 'link_after'        => "", // (string) Text after the link text.
-								// 'echo'              => "", // (bool) Whether to echo the menu or return it. Default true.
-								// 'depth'             => "", // (int) How many levels of the hierarchy are to be included. 0 means all. Default 0.
-								// 'walker'            => "", // (object) Instance of a custom walker class.
-								// 'items_wrap'        => "", // (string) How the list items should be wrapped. Default is a ul with an id and class. Uses printf() format with numbered placeholders.
-								// 'item_spacing'      => "", // (string) Whether to preserve whitespace within the menu's HTML. Accepts 'preserve' or 'discard'. Default 'preserve'.
+                            <li> <a href="javascript:;">الخدمات الإلكترونية<i class="fa fa-chevron-down"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">استعلام عن معاملة</a></li>
+                                    <li><a href="index-2.html">خدمة تواصل الإلكترونية</a></li>
+                                    <li><a href="index.html">التحقق من وثائق منسوبي إمارة مكة</a></li>
+                                </ul>
+                            </li>
 
-							))
-
-							?>
-						
-                      
-
-
-
+                            <li class="has-mega-menu "> <a href="javascript:;">المحافظات <i class="fa fa-chevron-down"></i></a>
+                                <ul class="mega-menu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="about-1.html">مكة المكرمة</a></li>
+                                            <li><a href="about-2.html">محافظة جدة</a></li>
+											
+										</ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="about-1.html">مكة المكرمة</a></li>
+                                            <li><a href="about-2.html">محافظة جدة</a></li>
+											
+										</ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="about-1.html">مكة المكرمة</a></li>
+                                            <li><a href="about-2.html">محافظة جدة</a></li>
+											
+										</ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="about-1.html">مكة المكرمة</a></li>
+                                            <li><a href="about-2.html">محافظة جدة</a></li>
+											
+										</ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                         
+                        </ul>
                     </div>
+
+
+                
 
 
 					</div>
