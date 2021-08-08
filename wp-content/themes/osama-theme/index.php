@@ -31,7 +31,25 @@ get_header();
 
 					<div class="widget widget_categories">
 						<h4 class="widget-title">Categories List</h4>
-						<?php get_sidebar(); ?>
+						<!-- 
+							<?php
+							/*
+						get_sidebar(); 
+						*/
+							?> 
+						-->
+						<ul>
+							<li><a href="#">aciform</a> (1)</li>
+							<li><a href="#">championship</a> (1) </li>
+							<li><a href="#">chastening</a> (1) </li>
+							<li><a href="#">clerkship</a> (1) </li>
+							<li><a href="#">disinclination</a> (1) </li>
+							<li><a href="#">disinfection</a> (1) </li>
+							<li><a href="#">dispatch</a> (1) </li>
+							<li><a href="#">echappee</a> (1) </li>
+							<li><a href="#">Edge Case</a> (6) </li>
+							<li><a href="#">enphagy</a> (1) </li>
+						</ul>
 					</div>
 
 
@@ -56,26 +74,21 @@ get_header();
 					/* Start the Loop */
 					while (have_posts()) :
 						the_post();
-
 						/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 						get_template_part('template-parts/content', get_post_type());
-
 					endwhile;
-
 					the_posts_navigation();
 
 				else :
-
 					get_template_part('template-parts/content', 'none');
-
 				endif;
 				?>
 
-			
+
 
 				<!-- blog END -->
 			</div>
